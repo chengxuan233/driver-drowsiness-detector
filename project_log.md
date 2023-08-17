@@ -11,3 +11,12 @@
 - learn to use git commands
 - learn to use Linux shell commands
 - commit changes and push to GitHub from PyCharm
+
+## Day 2
+### Objectives
+- prepare the project 3rd Python packages
+- build the Python code structure
+- construct the project milestone
+
+### Key results
+- TBD
