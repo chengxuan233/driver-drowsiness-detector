@@ -1,1 +1,5 @@
 # all dependent packages
+opencv-python
+tensorflow
+keras
+pygame
