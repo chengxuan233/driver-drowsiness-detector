@@ -16,7 +16,7 @@
 ### Objectives
 - prepare the project 3rd Python packages
 - build the Python code structure
-- construct the project milestone
+- summarize the project milestone
 
 ### Key results
 - TBD
