@@ -31,3 +31,11 @@ _ the project milestone includes dataset preparation, driver drowsiness classifi
 ### key results
 - download the yawn_eye_dataset_new dataset from Kaggle
 - implement the ImageGenerator class
+
+## Day 4
+### Objectives
+- develop Python scripts to train driver drowsiness classifier
+- develop Python scripts to use prepared classifier to detect driver drowsiness
+
+### key results
+- TBD
