@@ -38,8 +38,8 @@ class ModelTrain(object):
 
         batch_size = 32
         target_size = (24, 24)
-        train_batch = self.generator('data/train', shuffle=True, batch_size=batch_size, target_size=target_size)
-        valid_batch = self.generator('data/valid', shuffle=True, batch_size=batch_size, target_size=target_size)
+        train_batch = self.generator.generator('data/train', batch_size=batch_size, target_size=target_size)
+        valid_batch = self.generator.generator('data/valid', batch_size=batch_size, target_size=target_size)
         SPE = len(train_batch.classes) // batch_size
         VS = len(valid_batch.classes) // batch_size
         print(SPE, VS)
