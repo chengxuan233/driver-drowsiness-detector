@@ -4,8 +4,7 @@ train driver drowsiness detector model to classify diver eyes into 'open' and 'c
 """
 from keras import Sequential
 from keras.src.layers import Conv2D, MaxPooling2D, Dropout, Flatten, Dense
-
-from data_pre_process import ImageGenerator
+from driver_drowsiness_detector.data_pre_process import ImageGenerator
 import os
 
 
@@ -38,8 +37,8 @@ class ModelTrain(object):
 
         batch_size = 32
         target_size = (24, 24)
-        train_batch = self.generator.generator('data/train', batch_size=batch_size, target_size=target_size)
-        valid_batch = self.generator.generator('data/valid', batch_size=batch_size, target_size=target_size)
+        train_batch = self.generator.generator(train_directory, batch_size=batch_size, target_size=target_size)
+        valid_batch = self.generator.generator(valid_directory, batch_size=batch_size, target_size=target_size)
         SPE = len(train_batch.classes) // batch_size
         VS = len(valid_batch.classes) // batch_size
         print(SPE, VS)
@@ -78,9 +77,9 @@ class ModelTrain(object):
         """
         save the trained model in given path
         """
-        if not os.path.exists(path):
-            print(f"the path {path} does not exist")
-            return
+        # if not os.path.exists(path):
+        #     print(f"the path {path} does not exist")
+        #     return
 
         if self.model:
             self.model.save(path, overwrite=True)

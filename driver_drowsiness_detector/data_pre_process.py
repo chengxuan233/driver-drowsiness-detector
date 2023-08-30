@@ -10,17 +10,16 @@ class ImageGenerator(object):
     utility generator for iterating images from given directory.
     """
 
-    def __init__(self, directory: str):
+    def __init__(self):
         """
         generator constructor.
-        :param directory: image directory to be iterated.
         """
-        self.directory = directory
+        pass
 
-    def generator(self, generator=ImageDataGenerator(rescale=1. / 255), batch_size=32,
+    def generator(self, directory: str, generator=ImageDataGenerator(rescale=1. / 255), batch_size=32,
                   target_size=(24, 24)) -> ImageDataGenerator:
         """
         return a generator for the given directory.
         :return: image generator
         """
-        return generator.flow_from_directory(self.directory, batch_size=batch_size, target_size=target_size)
+        return generator.flow_from_directory(directory, batch_size=batch_size, target_size=target_size)
