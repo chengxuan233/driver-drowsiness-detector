@@ -78,4 +78,9 @@ class ModelTrain(object):
         """
         save the trained model in given path
         """
-        pass
+        if not os.path.exists(path):
+            print(f"the path {path} does not exist")
+            return
+
+        if self.model:
+            self.model.save(path, overwrite=True)
