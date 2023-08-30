@@ -19,4 +19,15 @@
 - summarize the project milestone
 
 ### Key results
-- TBD
+- all 3rd Python packages was installed in local development environment
+- the project implementation structure was built based on data_pre_process.py, model_train.py, and starter.py
+_ the project milestone includes dataset preparation, driver drowsiness classifier model training, model verification, fine-tuning model based on usage feedback
+
+## Day 3
+### Objectives
+- download the dataset from Kaggle
+- define and implement the ImageGenerator
+
+### key results
+- download the yawn_eye_dataset_new dataset from Kaggle
+- implement the ImageGenerator class
