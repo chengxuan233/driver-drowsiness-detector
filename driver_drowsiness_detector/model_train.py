@@ -44,7 +44,7 @@ class ModelTrain(object):
         print(SPE, VS)
 
         self.model = Sequential([
-            Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(24, 24, 1)),
+            Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(24, 24, 3)),
             MaxPooling2D(pool_size=(1, 1)),
             Conv2D(32, (3, 3), activation='relu'),
             MaxPooling2D(pool_size=(1, 1)),
@@ -65,7 +65,7 @@ class ModelTrain(object):
             # one more dropout for convergence' sake :)
             Dropout(0.5),
             # output a softmax to squash the matrix into output probabilities
-            Dense(2, activation='softmax')
+            Dense(4, activation='softmax')
         ])
 
         self.model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
